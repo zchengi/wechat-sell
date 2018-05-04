@@ -13,6 +13,8 @@ CREATE TABLE `product_info` (
   COMMENT '小图',
   `category_type`       INT           NOT NULL
   COMMENT '类目编号',
+  `product_status`      TINYINT(3)              DEFAULT '0'
+  COMMENT '商品状态,0正常1下架',
   `create_time`         TIMESTAMP     NOT NULL  DEFAULT current_timestamp
   COMMENT '创建时间',
   `update_time`         TIMESTAMP     NOT NULL  DEFAULT current_timestamp ON UPDATE current_timestamp
