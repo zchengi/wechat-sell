@@ -22,3 +22,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### JReble ###
+/src/main/resources/rebel.xml

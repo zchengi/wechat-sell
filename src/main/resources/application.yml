@@ -6,10 +6,5 @@ spring:
     url: jdbc:mysql://www.chengix.com:3306/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
-#logging:
-#  pattern:
-#    console: "%d - %msg%n"
-##  path: D:/IntelliJProject/log/sell/
-#  file: D:/IntelliJProject/log/sell/sell.log
-#  level:
-#    com.cheng.LoggerTest: debug
+server:
+  context-path: /sell
