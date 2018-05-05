@@ -48,7 +48,7 @@ CREATE TABLE `order_master` (
   COMMENT '买家电话',
   `buyer_address` VARCHAR(128)  NOT NULL
   COMMENT '买家地址',
-  `buyer_opid`    VARCHAR(64)   NOT NULL
+  `buyer_openid`    VARCHAR(64)   NOT NULL
   COMMENT '买家微信 openId',
   `order_amount`  DECIMAL(8, 2) NOT NULL
   COMMENT '订单总金额',
@@ -61,7 +61,7 @@ CREATE TABLE `order_master` (
   `update_time`   TIMESTAMP     NOT NULL  DEFAULT current_timestamp ON UPDATE current_timestamp
   COMMENT '修改时间',
   PRIMARY KEY (`order_id`),
-  KEY `idx_buyer_openid` (`buyer_opid`)
+  KEY `idx_buyer_openid` (`buyer_openid`)
 )
   COMMENT '订单表';
 
