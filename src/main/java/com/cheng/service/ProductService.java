@@ -1,6 +1,7 @@
 package com.cheng.service;
 
 import com.cheng.dataobject.ProductInfo;
+import com.cheng.dto.CartDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -30,8 +31,10 @@ public interface ProductService {
     /**
      * 添加库存
      */
+    void increaseStock(List<CartDTO> cartDTOList);
 
     /**
      * 减少库存
      */
+    void decreaseStock(List<CartDTO> cartDTOList);
 }
