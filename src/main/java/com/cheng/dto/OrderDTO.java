@@ -1,7 +1,11 @@
 package com.cheng.dto;
 
 import com.cheng.dataobject.OrderDetail;
+import com.cheng.enums.OrderStatusEnum;
+import com.cheng.enums.PayStatusEnum;
+import com.cheng.utils.EnumUtil;
 import com.cheng.utils.serializer.Date2LongSerializer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 
@@ -76,4 +80,14 @@ public class OrderDTO {
      * 订单列表
      */
     List<OrderDetail> orderDetailList;
+
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum() {
+        return EnumUtil.getByCode(orderStatus, OrderStatusEnum.class);
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum() {
+        return EnumUtil.getByCode(payStatus, PayStatusEnum.class);
+    }
 }
