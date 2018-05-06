@@ -1,19 +1,18 @@
 <html>
-<#--<#include "../common/header.ftl">-->
-<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<#include "../common/header.ftl"/>
 
 <body>
 <div id="wrapper" class="toggled">
 
 <#-- 边栏 sidebar -->
-<#--<#include "../common/nav.ftl">-->
+<#include "../common/nav.ftl"/>
 
 <#-- 主要内容 content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-md-12 column">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-condensed">
                         <thead>
                         <tr>
                             <th>订单id</th>

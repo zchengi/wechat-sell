@@ -2,6 +2,8 @@ package com.cheng.dataobject;
 
 import com.cheng.enums.OrderStatusEnum;
 import com.cheng.enums.PayStatusEnum;
+import com.cheng.utils.serializer.Date2LongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -65,10 +67,12 @@ public class OrderMaster {
     /**
      * 创建时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 }
