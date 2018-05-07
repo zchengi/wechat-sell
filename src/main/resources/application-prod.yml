@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: cheng
+    password: zy159357+
+    url: jdbc:mysql://www.chengix.com:3306/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+server:
+  context-path: /sell
+#logging:
+#  level:
+#    com.cheng.dataobject.mapper: trace
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: D:/IntelliJProject/log/sell/
+#  file: D:/IntelliJProject/log/sell/sell.log
+#  level:
+#    com.cheng.LoggerTest: debug
